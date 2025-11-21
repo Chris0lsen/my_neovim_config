@@ -6,6 +6,7 @@ vim.env.PATH = table.concat({
 }, ":")
 require("config.lazy")
 require("config.keymaps")
+require("config.diagnostics")
 require("config.lsp")
 -- Set Vim settings using Lua
 vim.opt.compatible = false -- disable compatibility to old-time vi
@@ -27,3 +28,6 @@ vim.opt.clipboard = "unnamedplus" -- use system clipboard
 vim.opt.cursorline = true -- highlight current cursor line
 vim.opt.ttyfast = true -- speed up scrolling in Vim
 vim.opt.termguicolors = true -- enable 24-bit RGB colors
+
+-- Temporary (?) Copilot fix
+vim.g.copilot_node_command = os.getenv("HOME") .. "/.asdf/installs/nodejs/22.1.0/bin/node"
